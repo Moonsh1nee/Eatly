@@ -1,3 +1,31 @@
 .header {
+    padding: 47px 0 25px;
 
+    &__wrapper {
+        @include flex-center-space-between;
+        gap: 20px;
+
+        &-left {
+            @include flex-center;
+            gap: 103px;
+        }
+    }
+
+    &__logo {
+        @include flex-center;
+        gap: 11px;
+
+        &-title {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 21px;
+            line-height: 130%;
+            color: var(--color-primary);
+        }
+    }
+
+    &__auth {
+        @include flex-center;
+        gap: 9px;
+    }
 }

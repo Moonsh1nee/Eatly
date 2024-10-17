@@ -1,0 +1,106 @@
+.hero {
+    padding: 80px 0 120px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 37px;
+    }
+
+    &__content {
+        max-width: 568px;
+        margin-top: 70px;
+
+        &-caption {
+            font-family: var(--font-family);
+            font-weight: 600;
+            font-size: 15px;
+            line-height: 120%;
+            letter-spacing: 0.13em;
+            color: rgba(32, 31, 31, 0.2);
+
+            padding-left: 74px;
+            margin-bottom: 18px;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0px;
+                top: 8px;
+                width: 54px;
+                height: 1px;
+                background-color: rgba(32, 31, 31, 0.2);
+                
+            }
+        }
+
+        &-title {
+            font-weight: 600;
+            font-size: 75px;
+            line-height: 120%;
+            letter-spacing: -0.04em;
+            color: #201f1f;
+
+            margin-bottom: 16px;
+
+            span {
+                color: #5C4EAE;
+            }
+        }
+
+        &-desc {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 156%;
+            text-align: justify;
+            
+            max-width: 499px;
+            margin-bottom: 53px;
+
+            span {
+                color: #6155AE;
+            }
+        }
+
+        &-btns {
+            display: flex;
+            gap: 18px;
+
+            margin-bottom: 33px;
+        }
+
+        &-score {
+            @include flex-center;
+            gap: 10px;
+            
+
+            &-trustpilot {
+                margin-right: 10px;
+                padding-bottom: 9px;
+            }
+
+            &-stars {
+                @include flex-center;
+                gap: 4px;
+            }
+
+            &-amount {
+                font-family: var(--font6);
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 150%;
+                color: #334155;
+                opacity: .7;
+            }
+        }
+    }
+
+    &__picture {
+        max-width: 603px;
+
+        img {
+            position: relative;
+        }
+    }
+}

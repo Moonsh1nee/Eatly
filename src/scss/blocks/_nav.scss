@@ -1,0 +1,12 @@
+.menu__list {
+    @include flex-center;
+    gap: 53px;
+
+    &-link {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 150%;
+        text-transform: capitalize;
+        color: var(--color-dark-grey);
+    }
+}

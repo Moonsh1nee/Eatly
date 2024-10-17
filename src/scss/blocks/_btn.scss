@@ -1,0 +1,49 @@
+a.btn,
+.btn {
+    @include flex-center;
+    justify-content: center;
+
+    border-radius: 18px;
+    padding: 21px 29px;
+
+    background-color: var(--color-primary);
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 150%;
+    text-transform: capitalize;
+    color: var(--page-bg);
+
+    &__auth--log {
+        background-color: unset;
+
+        color: var(--color-dark-grey);
+    }
+
+    &__hero--start {
+        border-radius: 12px;
+        width: 156px;
+        height: 59px;
+
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        color: #fff;
+    }
+
+    &__hero--pro {
+        border: 1.50px solid #6c5fbc;
+        border-radius: 12px;
+        width: 110px;
+        height: 59px;
+
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        color: #6c5fbc;
+
+        background-color: var(--page-bg);
+    }
+}
