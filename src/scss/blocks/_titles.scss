@@ -1,0 +1,33 @@
+.title-2 {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 114%;
+    text-transform: capitalize;
+    color: #18181b;
+
+    span {
+        color: #6c5fbc;
+    }
+}
+
+.title-3 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 57%;
+    color: #323142;
+    text-align: center;
+
+    span {
+        color: #6c5fbc;
+    }
+}
+
+.title-4 {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 162%;
+    color: #323142;
+}

@@ -98,9 +98,25 @@
 
     &__picture {
         max-width: 603px;
+        position: relative;
 
-        img {
-            position: relative;
+        .hero__picture-img--1 {
+            position: absolute;
+            top: -24px;
+            right: -16px;
+        }
+
+        .hero__picture-img--2 {
+            position: absolute;
+            bottom: 26px;
+            left: -10px;
+        }
+        
+        .hero__picture-img--3 {
+            position: absolute;
+            top: 115px;
+            right: 37px;
+            z-index: -1;
         }
     }
 }

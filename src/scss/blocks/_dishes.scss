@@ -1,0 +1,104 @@
+.dishes {
+    padding: 100px 120px;
+    
+    .container {
+        position: relative;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 31px;
+
+        padding-top: 76px;
+        padding-bottom: 112px;
+    }
+
+    &-card {
+        border: 1.44px solid #f4f4f6;
+        border-radius: 35px;
+        box-shadow: 7px 82px 41px 0 rgba(229, 229, 229, 0.7);
+        background: #fff;
+
+        position: relative;
+
+        padding: 33px 22px 29px;
+
+        &__content {
+
+            &-category {
+                margin-top: 5px;
+
+                display: inline-block;
+
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 11px;
+                color: #daa31a;
+
+                border-radius: 5px;
+                padding: 3px 8px;
+                background: #f7edd0;
+
+                &--trending {
+                    color: #fb471d;
+                    background: #f7c5ba;
+                }
+
+                &--supreme {
+                    color: #309d5b;
+                    background: rgba(51, 172, 100, .2);
+                }
+            }
+
+            .dishes-card__content-title {
+                font-size: 23px;
+                line-height: 163%;
+            }
+
+            &-info {
+                @include flex-center;
+                gap: 6px;
+
+                font-family: var(--third-family);
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 133%;
+                color: #8e97a6;
+
+                margin-bottom: 13px;
+
+                .dishes-card__content-time {
+                    position: relative;
+                    padding-right: 16px;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        width: 5px;
+                        height: 5px;
+                        background-color: #8e97a6;
+                        border-radius: 50%;
+                        top: 10px;
+                        right: 5px;
+                    }
+                }
+            }
+
+            &-price {
+                @include flex-center-space-between;
+
+                font-family: var(--third-family);
+                font-weight: 700;
+                font-size: 25px;
+                line-height: 156%;
+                color: #323142;
+
+                span {
+                    font-size: 18px;
+                    color: #8e97a6;
+                }
+            }
+        }
+    }
+}

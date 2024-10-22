@@ -1,10 +1,7 @@
 a.btn,
 .btn {
-    @include flex-center;
-    justify-content: center;
-
     border-radius: 18px;
-    padding: 21px 29px;
+    padding: 18px 27px;
 
     background-color: var(--color-primary);
 
@@ -14,6 +11,8 @@ a.btn,
     text-transform: capitalize;
     color: var(--page-bg);
 
+    display: inline-block;
+
     &__auth--log {
         background-color: unset;
 
@@ -22,8 +21,6 @@ a.btn,
 
     &__hero--start {
         border-radius: 12px;
-        width: 156px;
-        height: 59px;
 
         font-family: var(--font-family);
         font-weight: 500;
@@ -35,8 +32,6 @@ a.btn,
     &__hero--pro {
         border: 1.50px solid #6c5fbc;
         border-radius: 12px;
-        width: 110px;
-        height: 59px;
 
         font-family: var(--font-family);
         font-weight: 500;
@@ -46,4 +41,50 @@ a.btn,
 
         background-color: var(--page-bg);
     }
+
+    &--download {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 125%;
+        text-align: center;
+        color: #fff;
+
+        padding: 20px 18px 20px 26px;
+
+        span, 
+        svg {
+            vertical-align: middle;
+        }
+
+        span {
+            margin-right: 10px;
+        }
+    }
+
+    &--view {
+        position: absolute;
+        right: 11px;
+        bottom: 0;
+        font-size: 20px;
+        line-height: 226%;
+        letter-spacing: -0.01em;
+        color: #acadb9;
+
+        padding: 0;
+        background-color: unset;
+
+        svg {
+            stroke: #acadb9;
+        }
+    }
+}
+
+.btn-add {
+    @include flex-center;
+    padding: 13px;
+    border-radius: 9px;
+    background: #323142;
+    width: 43px;
+    height: 39px;
 }
