@@ -45,3 +45,32 @@
     width: 15px;
     height: 15px;
 }
+
+.icon--arrow-down {
+    width: 16px;
+    height: 9px;
+
+    margin-left: 12px;
+
+    stroke-width: 2.36px;
+    stroke: #1a202c;
+    fill: none;
+}
+
+.icon--wallet,
+.icon--money {
+    width: 50px;
+    height: 50px;
+
+    fill: none;
+    stroke: #936dff;
+
+    padding: 12px;
+    border-radius: 100%;
+    background: #f4f0ff;
+}
+
+.icon--money {
+    stroke: #22C55E;
+    background: #f2fdf6;
+}

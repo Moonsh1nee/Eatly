@@ -1,0 +1,203 @@
+.purchases {
+    padding: 103px 0 138px;
+}
+
+.purchases__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+
+    &-content {
+        flex-basis: 500px;
+        flex-shrink: 1;
+    }
+}
+
+.purchases__title {
+    margin-bottom: 48px;
+}
+
+.purchases__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.purchases__item {
+    position: relative;
+
+    padding: 5px 5px 5px 20px;
+
+    border-radius: 12px;
+    background: #fff;
+
+    display: flex;
+    gap: 19px;
+    align-items: center;
+
+    &-wrap {
+        display: flex;
+        gap: 4px;
+        flex-direction: column;
+    }
+
+    &-title.title-4 {
+        font-size: 19px;
+        line-height: 140%;
+    }
+
+    &-desc {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 140%;
+        color: #323142;
+
+        &--cancelled {
+            color: #f1534e;
+        }
+    }
+
+    &-time {
+        position: absolute;
+
+        right: 17px;
+        bottom: 10px;
+
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 140%;
+        color: #acadb9;
+    }
+}
+
+.purchases__wrapper-info {
+    padding: 38px 38px 46px;
+    flex-basis: 534px;
+    flex-shrink: 1;
+
+    border: 1.57px solid #edf2f7;
+    border-radius: 25px;
+    background: #fff;
+    box-shadow: 7px 60px 41px 0 rgba(229, 229, 229, 0.7);
+}
+
+.purchases__info {
+    @include flex-center-space-between;
+    margin-bottom: 45px;
+
+    h4 {
+        font-family: var(--third-family);
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 135%;
+        letter-spacing: 0.01em;
+        color: #1a202c;
+    }
+
+    &-select {
+        padding: 13px 19px;
+        border-radius: 13px;
+        background-color: #fafafa;
+
+        font-family: var(--third-family);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        text-align: right;
+        color: #1a202c;
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    &-item {
+        @include flex-center-space-between;
+
+        border: 1.57px solid #edf2f7;
+        border-radius: 19px;
+        padding: 25px 25px 55px 25px;
+
+        position: relative;
+
+        &-left {
+            @include flex-center;
+            gap: 19px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
+        }
+
+        &-title {
+            font-family: var(--third-family);
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 150%;
+            letter-spacing: 0.03em;
+            color: #1a202c;
+        }
+
+        &-desc {
+            font-family: var(--third-family);
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 150%;
+            letter-spacing: 0.04em;
+            color: #a0aec0;
+        }
+
+        &-right {
+            font-family: var(--third-family);
+            font-weight: 800;
+            font-size: 21px;
+            line-height: 150%;
+            letter-spacing: 0.01em;
+            text-align: right;
+            color: #1a202c;
+        }
+
+        &-progress div:first-child {
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+            z-index: 1;
+
+            width: calc(100% - 50px);
+            height: 9px;
+            border-radius: 79px;
+            background: #6c5fbc;
+
+            opacity: 0.2;
+        }
+
+        &-progress div:last-child {
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            z-index: 2;
+
+            width: calc(100% - 50px - 30%);
+            height: 9px;
+            border-radius: 79px;
+            background: #6c5fbc;
+        }
+
+        &-progress--orange div:first-child {
+            width: calc(100% - 50px);
+            background: #fbad18;
+        }
+
+        &-progress--orange div:last-child {
+            width: calc(100% - 50px - 50%);
+            background: #fbad18;
+        }
+    }
+}
