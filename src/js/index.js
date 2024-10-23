@@ -1,9 +1,14 @@
-// Галерея и лайтбоксы от Fancybox
-import { Fancybox } from '@fancyapps/ui';
-import '@fancyapps/ui/dist/fancybox/fancybox.css';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
-Fancybox.bind('[data-fancybox]', {
-	// Your custom options
+const swiper = new Swiper('.swiper', {
+  slidesPerView: 'auto',
+  centeredSlides: true,
+  spaceBetween: 46,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'progressbar',
+  },
 });
 
 // Мобильная навигация
