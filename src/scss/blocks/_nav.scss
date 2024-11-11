@@ -9,4 +9,22 @@
         text-transform: capitalize;
         color: var(--color-dark-grey);
     }
+
+    @include tablet {
+        gap: 38px;
+
+        &-link {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 680px) {
+        gap: 20px;
+    }
+}
+
+@include mobile {
+    .header__nav {
+        display: none;
+    }
 }

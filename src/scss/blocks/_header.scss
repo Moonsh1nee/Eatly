@@ -1,9 +1,10 @@
 .header {
-    padding: 47px 0 25px;
+    padding: 48px 0 0;
 
     &__wrapper {
         @include flex-center-space-between;
         gap: 20px;
+        margin-bottom: 25px;
 
         &-left {
             @include flex-center;
@@ -27,5 +28,85 @@
     &__auth {
         @include flex-center;
         gap: 9px;
+    }
+
+    .mobile-nav-btn {
+        display: none;
+    }
+}
+
+@include tablet {
+    .header {
+        padding: 34px 0 0;
+
+        &__wrapper {
+            gap: 10px;
+            margin-bottom: 18px;
+
+            &-left {
+                gap: 74px;
+            }
+        }
+
+        &__logo {
+            gap: 8px;
+
+            &-img {
+                width: 33px;
+                height: 31px;
+            }
+
+            &-title {
+                font-size: 15px;
+            }
+        }
+
+        &__auth {
+            gap: 7px;
+        }
+    }
+}
+
+@media (max-width: 680px) {
+    .header {
+        &__wrapper {
+            gap: 10px;
+
+            &-left {
+                gap: 30px;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .header {
+        padding: 33px 0 0;
+
+        &__wrapper {
+            gap: 30px;
+            margin-bottom: 31px;
+        }
+
+        &__logo {
+            gap: 11px;
+
+            &-img {
+                width: 46px;
+                height: 43px;
+            }
+
+            &-title {
+                font-size: 21px;
+            }
+        }
+
+        &__auth {
+            display: none;
+        }
+
+        .mobile-nav-btn {
+            display: flex;
+        }
     }
 }

@@ -30,7 +30,7 @@ a.btn,
     }
 
     &__hero--pro {
-        border: 1.50px solid #6c5fbc;
+        border: 1.5px solid #6c5fbc;
         border-radius: 12px;
 
         font-family: var(--font-family);
@@ -52,7 +52,7 @@ a.btn,
 
         padding: 20px 18px 20px 26px;
 
-        span, 
+        span,
         svg {
             vertical-align: middle;
         }
@@ -77,6 +77,13 @@ a.btn,
         svg {
             stroke: #acadb9;
         }
+    }
+
+    @include tablet {
+        padding: 13px 19px;
+        border-radius: 13px;
+
+        font-size: 12px;
     }
 }
 
