@@ -1,5 +1,17 @@
 .dishes {
-    padding: 100px 0 120px;
+    padding: 100px 0 0;
+
+    .delimiter {
+        margin-top: 120px;
+
+        @include tablet {
+            margin-top: 85px;
+        }
+
+        @include mobile {
+            margin-top: 66px;
+        }
+    }
     
     .container {
         position: relative;
@@ -100,5 +112,9 @@
                 }
             }
         }
+    }
+
+    a.btn--view {
+        bottom: 120px;
     }
 }

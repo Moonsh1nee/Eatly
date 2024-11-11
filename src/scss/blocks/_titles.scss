@@ -9,6 +9,18 @@
     span {
         color: #6c5fbc;
     }
+
+    @include tablet {
+        font-size: 36px;
+    }
+
+    @media (max-width: 700px) {
+        font-size: 32px;
+    }
+
+    @include mobile {
+        font-size: 30px;
+    }
 }
 
 .title-3 {
@@ -22,6 +34,10 @@
     span {
         color: #6c5fbc;
     }
+
+    @include tablet {
+        font-size: 31px;
+    }
 }
 
 .title-4 {
@@ -30,4 +46,16 @@
     font-size: 25px;
     line-height: 162%;
     color: #323142;
+
+    @include tablet {
+        font-size: 18px;
+    }
+
+    @media (max-width: 670px) {
+        font-size: 16px;
+    }
+
+    @include mobile {
+        font-size: 20px;
+    }
 }
