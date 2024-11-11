@@ -1,11 +1,15 @@
 .static {
     padding: 57px 0;
-    background-color: #5C4EAE;
+    background-color: #5c4eae;
 
     position: relative;
 
     .container {
         max-width: 942px;
+
+        @include tablet {
+            max-width: 700px;
+        }
     }
 
     &__list {
@@ -18,8 +22,8 @@
             gap: 11px;
 
             text-align: center;
-            
-            border-right: 1px solid rgba(197, 197, 197, .15);
+
+            border-right: 1px solid rgba(197, 197, 197, 0.15);
 
             .static__item-title {
                 font-family: var(--font4);
@@ -27,6 +31,18 @@
                 font-size: 43px;
                 line-height: 125%;
                 color: #fff;
+
+                @include tablet {
+                    font-size: 30px;
+                }
+
+                @include mobile {
+                    font-size: 43px;
+                }
+
+                @media (max-width: 300px) {
+                    font-size: 36px;
+                }
             }
 
             .static__item-desc {
@@ -34,13 +50,51 @@
                 font-size: 14px;
                 line-height: 150%;
                 color: #c5bfed;
+
+                @include tablet {
+                    font-size: 10px;
+                }
+
+                @include mobile {
+                    font-size: 14px;
+                }
             }
 
             &:last-child {
                 border-right: none;
             }
+
+            @include tablet {
+                gap: 7px;
+            }
+
+            @include mobile {
+                border-right: none;
+                border-bottom: 1px solid rgba(197, 197, 197, 0.15);
+
+                padding-bottom: 60px;
+
+                &:last-child {
+                    border-bottom: none;
+                    padding-bottom: 0;
+                }
+            }
         }
 
+        @include mobile {
+            grid-template-columns: 246px;
+            grid-template-rows: repeat(3, 1fr);
+            gap: 60px;
+            justify-content: center;
+        }
+    }
+
+    @include tablet {
+        padding: 35px 0;
+    }
+
+    @include mobile {
+        padding: 99px 0 22px;
     }
 }
 
@@ -54,10 +108,30 @@
 
         top: 0;
         left: 0;
+
+        @include tablet {
+            width: 284px;
+            height: 145px;
+        }
+
+        @include mobile {
+            top: 36px;
+            left: -64px;
+            transform: rotate(110deg);
+        }
     }
 
     &-3 {
         width: 384px;
+
+        @include tablet {
+            width: 273px;
+        }
+
+        @include mobile {
+            top: 42px;
+            left: -67px;
+        }
     }
 
     &-2,
@@ -66,10 +140,22 @@
         height: 220px;
         top: 0;
         right: 0;
+
+        @include tablet {
+            width: 84px;
+            height: 145px;
+        }
+
+        @include mobile {
+            display: none;
+        }
     }
 
     &-4 {
         width: 84px;
+
+        @include tablet {
+            width: 60px;
+        }
     }
 }
-
