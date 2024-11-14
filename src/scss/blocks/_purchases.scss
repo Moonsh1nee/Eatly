@@ -1,5 +1,25 @@
 .purchases {
-    padding: 103px 0 138px;
+    padding: 103px 0 0;
+
+    .delimiter {
+        margin-top: 120px;
+
+        @include tablet {
+            margin-top: 85px;
+        }
+
+        @include mobile {
+            margin-top: 110px;
+        }
+    }
+
+    @include tablet {
+        padding: 73px 0 0;
+    }
+
+    @include mobile {
+        padding: 85px 0 0;
+    }
 }
 
 .purchases__wrapper {
@@ -11,16 +31,53 @@
         flex-basis: 500px;
         flex-shrink: 1;
     }
+
+    @include tablet {
+        gap: 50px;
+
+        &-content {
+            flex-basis: 400px;
+        }
+    }
+
+    @include mobile {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+
+        &-content {
+            flex-basis: 100%;
+        }
+    }
 }
 
-.purchases__title {
+.purchases__title.title-2 {
     margin-bottom: 48px;
+
+    @include medium {
+        font-size: 26px;
+        max-width: 245px;
+    }
+
+    @include mobile {
+        font-size: 30px;
+        margin-bottom: 27px;
+        max-width: 400px;
+    }
 }
 
 .purchases__list {
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    @include tablet {
+        gap: 11px;
+    }
+
+    @include mobile {
+        gap: 10px;
+    }
 }
 
 .purchases__item {
@@ -39,11 +96,27 @@
         display: flex;
         gap: 4px;
         flex-direction: column;
+
+        @include tablet {
+            gap: 3px;
+        }
+
+        @include mobile {
+            gap: 2px;
+        }
     }
 
     &-title.title-4 {
         font-size: 19px;
         line-height: 140%;
+
+        @include tablet {
+            font-size: 13px;
+        }
+
+        @include mobile {
+            font-size: 12px;
+        }
     }
 
     &-desc {
@@ -55,6 +128,14 @@
 
         &--cancelled {
             color: #f1534e;
+        }
+
+        @include tablet {
+            font-size: 8px;
+        }
+
+        @include mobile {
+            font-size: 7px;
         }
     }
 
@@ -69,6 +150,35 @@
         font-size: 13px;
         line-height: 140%;
         color: #acadb9;
+
+        @include tablet {
+            font-size: 9px;
+            right: 12px;
+            bottom: 5px;
+        }
+
+        @include mobile {
+            font-size: 8px;
+            right: 10px;
+            bottom: 4px;
+        }
+    }
+
+    @include tablet {
+        padding: 3px 12px;
+        gap: 14px;
+        max-width: 245px;
+
+        img {
+            width: 51px;
+            height: 51px;
+        }
+    }
+
+    @include mobile {
+        padding: 3px 11px;
+        gap: 13px;
+        max-width: 300px;
     }
 }
 
@@ -81,11 +191,34 @@
     border-radius: 25px;
     background: #fff;
     box-shadow: 7px 60px 41px 0 rgba(229, 229, 229, 0.7);
+
+    @include tablet {
+        padding: 33px 26px;
+        flex-basis: 380px;
+        flex-shrink: 1;
+    }
+
+    @include medium {
+        padding: 26px 20px;
+    }
+
+    @media (max-width: 675px) {
+        flex-basis: 50%;
+        flex-shrink: 0;
+    }
+
+    @include mobile {
+        padding: 27px 22px;
+        flex-basis: auto;
+        max-width: 400px;
+        width: 100%;
+    }
 }
 
 .purchases__info {
     @include flex-center-space-between;
     margin-bottom: 45px;
+    flex-shrink: 0;
 
     h4 {
         font-family: var(--third-family);
@@ -94,6 +227,18 @@
         line-height: 135%;
         letter-spacing: 0.01em;
         color: #1a202c;
+
+        @include tablet {
+            font-size: 20px;
+        }
+
+        @include medium {
+            font-size: 18px;
+        }
+
+        @include mobile {
+            font-size: 16px;
+        }
     }
 
     &-select {
@@ -108,12 +253,42 @@
         letter-spacing: 0.03em;
         text-align: right;
         color: #1a202c;
+
+        @include flex-center;
+
+        @include tablet {
+            padding: 9px 13px;
+            font-size: 13px;
+            border-radius: 9px;
+
+            svg {
+                width: 11px;
+                height: 11px;
+            }
+        }
+
+        @include medium {
+            font-size: 11px;
+        }
+
+        @include mobile {
+            padding: 7px 11px;
+            font-size: 11px;
+        }
     }
 
     &-list {
         display: flex;
         flex-direction: column;
         gap: 22px;
+
+        @include tablet {
+            gap: 16px;
+        }
+
+        @include mobile {
+            gap: 13px;
+        }
     }
 
     &-item {
@@ -134,6 +309,18 @@
                 flex-direction: column;
                 gap: 3px;
             }
+
+            @include tablet {
+                gap: 14px;
+            }
+
+            @include medium {
+                gap: 10px;
+            }
+
+            @include mobile {
+                gap: 11px;
+            }
         }
 
         &-title {
@@ -143,6 +330,14 @@
             line-height: 150%;
             letter-spacing: 0.03em;
             color: #1a202c;
+
+            @include tablet {
+                font-size: 13px;
+            }
+
+            @include medium {
+                font-size: 11px;
+            }
         }
 
         &-desc {
@@ -152,6 +347,14 @@
             line-height: 150%;
             letter-spacing: 0.04em;
             color: #a0aec0;
+
+            @include tablet {
+                font-size: 11px;
+            }
+
+            @include medium {
+                font-size: 9px;
+            }
         }
 
         &-right {
@@ -162,6 +365,21 @@
             letter-spacing: 0.01em;
             text-align: right;
             color: #1a202c;
+
+            @include tablet {
+                font-size: 15px;
+
+                position: absolute;
+                right: 18px;
+            }
+
+            @include medium {
+                font-size: 13px;
+            }
+
+            @media (max-width: 300px) {
+                font-size: 11px;
+            }
         }
 
         &-progress div:first-child {
@@ -176,6 +394,14 @@
             background: #6c5fbc;
 
             opacity: 0.2;
+
+            @include tablet {
+                bottom: 18px;
+            }
+
+            @include medium {
+                bottom: 15px;
+            }
         }
 
         &-progress div:last-child {
@@ -188,6 +414,14 @@
             height: 9px;
             border-radius: 79px;
             background: #6c5fbc;
+
+            @include tablet {
+                bottom: 18px;
+            }
+
+            @include medium {
+                bottom: 15px;
+            }
         }
 
         &-progress--orange div:first-child {
@@ -199,5 +433,27 @@
             width: calc(100% - 50px - 50%);
             background: #fbad18;
         }
+
+        @include tablet {
+            padding: 18px 18px 39px;
+            border: 1.12px solid #edf2f7;
+            border-radius: 13px;
+        }
+
+        @include medium {
+            padding: 15px 15px 30px;
+        }
+
+        @include mobile {
+            padding: 15px 15px 32px;
+        }
+    }
+
+    @include tablet {
+        margin-bottom: 32px;
+    }
+
+    @include mobile {
+        margin-bottom: 27px;
     }
 }

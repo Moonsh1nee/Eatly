@@ -37,13 +37,27 @@
     height: 19px;
     top: 24px;
     right: 22px;
+
+    @include tablet {
+        width: 22px;
+        top: 20px;
+        right: 18px;
+    }
+
+    @media (max-width: 370px) {
+        width: 15px;
+        height: 13px;
+        top: 20px;
+        right: 18px;
+    }
 }
 
 .icon--add {
     fill: #fff;
+    stroke-width: 1px;
     stroke: #fff;
-    width: 15px;
-    height: 15px;
+    width: 16px;
+    height: 16px;
 }
 
 .icon--arrow-down {
@@ -68,10 +82,16 @@
     padding: 12px;
     border-radius: 100%;
     background: #f4f0ff;
+
+    @include tablet {
+        width: 35px;
+        height: 35px;
+        padding: 8px;
+    }
 }
 
 .icon--money {
-    stroke: #22C55E;
+    stroke: #22c55e;
     background: #f2fdf6;
 }
 
@@ -80,6 +100,16 @@
     height: 45px;
 
     fill: #dadada;
+
+    @include tablet {
+        width: 42px;
+        height: 32px;
+    }
+
+    @include mobile {
+        width: 35px;
+        height: 27px;
+    }
 }
 
 .icon--inst {
@@ -87,12 +117,22 @@
     height: 21px;
 
     fill: #081420;
+
+    @include tablet {
+        width: 15px;
+        height: 15px;
+    }
 }
 .icon--in {
     width: 22px;
     height: 21px;
 
     fill: #081420;
+
+    @include tablet {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 .icon--facebook {
@@ -100,6 +140,11 @@
     height: 22px;
 
     fill: #081420;
+
+    @include tablet {
+        width: 15px;
+        height: 15px;
+    }
 }
 
 .icon--twitter {
@@ -107,4 +152,9 @@
     height: 19px;
 
     fill: #081420; //fill: #6c5fbc;
+
+    @include tablet {
+        width: 15px;
+        height: 15px;
+    }
 }

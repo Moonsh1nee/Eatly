@@ -65,7 +65,7 @@ a.btn,
     &--view {
         position: absolute;
         right: 11px;
-        bottom: 85px;
+        bottom: 120px;
         font-size: 20px;
         line-height: 226%;
         letter-spacing: -0.01em;
@@ -95,14 +95,39 @@ a.btn,
                 height: 20px;
             }
         }
+
+        &--view {
+            bottom: 65px;
+            font-size: 14px;
+        }
     }
 }
 
 .btn-add {
-    @include flex-center;
-    padding: 13px;
     border-radius: 9px;
-    background: #323142;
     width: 43px;
     height: 39px;
+    background: #323142;
+
+    @include tablet {
+        width: 32px;
+        height: 29px;
+        border-radius: 6px;
+
+        svg {
+            width: 11px;
+            height: 11px;
+        }
+    }
+
+    @media (max-width: 370px) {
+        border-radius: 6px;
+        width: 28px;
+        height: 25px;
+
+        svg {
+            width: 9px;
+            height: 9px;
+        }
+    }
 }

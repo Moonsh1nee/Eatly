@@ -4,19 +4,27 @@
     .container {
         max-width: 1244px;
     }
+
+    @include tablet {
+        margin-bottom: 150px;
+    }
+
+    @include mobile {
+        margin-bottom: 198px;
+    }
 }
 
 .sale__wrapper {
     position: relative;
 
-    padding: 37px 0 61px 66px;
+    padding: 36px 0 59px 66px;
 
     border-radius: 30px;
 
     background-color: #6c5fbc;
-    background-image: url('./../../img/sale/sale-bg.png');
+    background-image: url("./../../img/sale/sale-bg.png");
     background-position: -2px 0; /* x y */
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
 
     &-title {
@@ -26,13 +34,31 @@
         color: #fff;
 
         margin-bottom: 9px;
+
+        @include tablet {
+            font-size: 49px;
+
+            margin-bottom: 6px;
+        }
+
+        @include medium {
+            font-size: 40px;
+
+            margin-bottom: 4px;
+        }
+
+        @include mobile {
+            margin-bottom: 16px;
+
+            text-align: center;
+        }
     }
 
     &-form {
         border-radius: 14px;
 
         max-width: 439px;
-        height: 68px;
+        height: 66px;
 
         padding-left: 22px;
 
@@ -50,6 +76,75 @@
             text-transform: capitalize;
             color: #878787;
         }
+
+        @include tablet {
+            max-width: 313px;
+            height: 48px;
+
+            padding-left: 15px;
+
+            input {
+                max-width: 160px;
+            }
+
+            input::placeholder {
+                font-size: 11px;
+            }
+        }
+
+        @include medium {
+            max-width: 250px;
+            height: 40px;
+
+            padding-left: 10px;
+
+            input {
+                max-width: 130px;
+            }
+
+            input::placeholder {
+                font-size: 9px;
+            }
+        }
+
+        @include mobile {
+            max-width: 400px;
+            height: 48px;
+            margin: 0 auto;
+
+            padding-left: 10px;
+
+            input {
+                max-width: 300px;
+            }
+
+            input::placeholder {
+                font-size: 10px;
+            }
+        }
+
+        @media (max-width: 440px) {
+            input {
+                max-width: 160px;
+            }
+        }
+
+        @media (max-width: 340px) {
+            input {
+                max-width: 100px;
+            }
+        }
+
+        @media (max-width: 270px) {
+            flex-wrap: wrap;
+            flex-shrink: 1;
+            justify-content: center;
+            padding-right: 10px;
+
+            input {
+                max-width: 100%;
+            }
+        }
     }
 
     &-img {
@@ -58,6 +153,39 @@
 
         right: 72px;
         bottom: -60px;
+
+        @include tablet {
+            width: 196px;
+            height: 196px;
+            right: 40px;
+            bottom: -40px;
+        }
+
+        @include medium {
+            width: 160px;
+            height: 160px;
+            right: 30px;
+            bottom: -30px;
+        }
+
+        @include mobile {
+            width: 170px;
+            height: 170px;
+            right: calc((100% - 170px) / 2);
+            bottom: -102px;
+        }
+    }
+
+    @include tablet {
+        padding: 26px 0 43px 47px;
+    }
+
+    @include mobile {
+        padding: 35px 27px 95px 27px;
+    }
+
+    @media (max-width: 440px) {
+        padding: 26px 17px 95px 17px;
     }
 }
 
@@ -74,4 +202,32 @@
     background: #6c5fbc;
 
     margin-right: 6px;
+
+    @include tablet {
+        font-size: 10px;
+
+        padding: 11px 17px 11px 18px;
+    }
+
+    @include medium {
+        font-size: 8px;
+
+        padding: 9px 14px 9px 15px;
+    }
+
+    @include mobile {
+        font-size: 10px;
+
+        padding: 11px 17px 11px 18px;
+    }
+
+    @media (max-width: 440px) {
+        padding: 9px 14px 9px 14px;
+    }
+
+    @media (max-width: 340px) {
+        padding: 7px 11px 7px 12px;
+
+        font-size: 8px;
+    }
 }
