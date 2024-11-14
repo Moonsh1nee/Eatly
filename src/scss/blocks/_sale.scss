@@ -203,6 +203,12 @@
 
     margin-right: 6px;
 
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        background: #5a4da3;
+    }
+
     @include tablet {
         font-size: 10px;
 

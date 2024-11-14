@@ -12,11 +12,23 @@ a.btn,
     color: var(--page-bg);
 
     display: inline-block;
+    transition: all 0.3s ease-in-out;
+
+    &__auth--sign {
+        &:hover {
+            background-color: #3f367a;
+        }
+    }
 
     &__auth--log {
         background-color: unset;
 
         color: var(--color-dark-grey);
+
+        &:hover {
+            background-color: var(--color-primary);
+            color: var(--page-bg);
+        }
     }
 
     &__hero--start {
@@ -27,6 +39,10 @@ a.btn,
         font-size: 16px;
         letter-spacing: 0.01em;
         color: #fff;
+
+        &:hover {
+            background-color: #3f367a;
+        }
     }
 
     &__hero--pro {
@@ -40,6 +56,11 @@ a.btn,
         color: #6c5fbc;
 
         background-color: var(--page-bg);
+
+        &:hover {
+            background-color: var(--color-primary);
+            color: var(--page-bg);
+        }
     }
 
     &--download {
@@ -60,22 +81,49 @@ a.btn,
         span {
             margin-right: 10px;
         }
+
+        &:hover {
+            background-color: #3f367a;
+        }
     }
 
     &--view {
         position: absolute;
         right: 11px;
         bottom: 120px;
+        font-family: var(--font-family);
+        font-weight: 500;
         font-size: 20px;
         line-height: 226%;
         letter-spacing: -0.01em;
         color: #acadb9;
+
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
         padding: 0;
         background-color: unset;
 
         svg {
             stroke: #acadb9;
+        }
+
+        &:hover {
+            color: #424242;
+
+            svg {
+                stroke: #424242;
+            }
+        }
+
+        @include tablet {
+            font-size: 14px;
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
         }
     }
 
@@ -130,4 +178,18 @@ a.btn,
             height: 9px;
         }
     }
+}
+
+.btn__auth--log:hover + .btn__auth--sign {
+    background-color: unset;
+    color: var(--color-dark-grey);
+}
+
+.btn__start--hover,
+a.btn__start--hover {
+    background-color: unset;
+    color: #6c5fbc;
+    background-color: var(--page-bg);
+    border: 1.5px solid #6c5fbc;
+    border-radius: 12px;
 }

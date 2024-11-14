@@ -13,6 +13,8 @@
     height: 28px;
     stroke: #fff;
     fill: none;
+
+    transition: all 0.3s ease-in-out;
 }
 
 .icon--star-purple {
@@ -118,6 +120,8 @@
 
     fill: #081420;
 
+    transition: all 0.3s ease-in-out;
+
     @include tablet {
         width: 15px;
         height: 15px;
@@ -128,6 +132,8 @@
     height: 21px;
 
     fill: #081420;
+
+    transition: all 0.3s ease-in-out;
 
     @include tablet {
         width: 15px;
@@ -141,6 +147,8 @@
 
     fill: #081420;
 
+    transition: all 0.3s ease-in-out;
+
     @include tablet {
         width: 15px;
         height: 15px;
@@ -152,6 +160,8 @@
     height: 19px;
 
     fill: #081420; //fill: #6c5fbc;
+
+    transition: all 0.3s ease-in-out;
 
     @include tablet {
         width: 15px;

@@ -1,23 +1,17 @@
-import Swiper from 'swiper/bundle';
-import 'swiper/css/bundle';
+const btnStart = document.querySelector('.btn__hero--start');
+const btnPro = document.querySelector('.btn__hero--pro');
 
-const swiper = new Swiper('.swiper', {
-  slidesPerView: 1,
-  centeredSlides: true,
-  spaceBetween: 0,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'progressbar',
-  },
-  breakpoints: {
-    576: {
-      slidesPerView: 'auto',
-      centeredSlides: true,
-      spaceBetween: 46,
-    },
-  },
+btnPro.addEventListener('mouseenter', () => {
+  btnStart.classList.add('btn__start--hover');
+});
+
+btnPro.addEventListener('mouseleave', () => {
+  btnStart.classList.remove('btn__start--hover');
 });
 
 // Мобильная навигация
 import mobileNav from './modules/mobile-nav.js';
 mobileNav();
+
+import swiper from './modules/swiper.js';
+swiper();

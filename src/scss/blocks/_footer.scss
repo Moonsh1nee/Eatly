@@ -39,6 +39,14 @@
             @include flex-center;
             gap: 54px;
 
+            li {
+                &:hover {
+                    svg {
+                        fill: #6c5fbc;
+                    }
+                }
+            }
+
             @include tablet {
                 gap: 38px;
             }
@@ -67,12 +75,38 @@
         gap: 70px;
 
         li a {
+            position: relative;
+
             font-family: var(--second-family);
             font-weight: 500;
             font-size: 17px;
             line-height: 150%;
             text-transform: capitalize;
             color: #999;
+
+            transition: all 0.3s ease-in-out;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: #3b3b3b;
+
+                left: 0;
+                bottom: -5px;
+                opacity: 0;
+
+                transition: all 0.2s ease-in-out;
+            }
+
+            &:hover {
+                color: #3b3b3b;
+
+                &::after {
+                    opacity: 1;
+                }
+            }
         }
     }
 
@@ -145,6 +179,7 @@
         .footer__down-list--mob {
             display: flex;
             gap: 20px;
+            padding-top: 11px;
 
             svg {
                 width: 16px;
