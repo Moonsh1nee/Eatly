@@ -1,7 +1,7 @@
 # Eatly
 ## _Page of Eatly_
 
-[__Watch the demo__]((https://moonsh1nee.github.io/Eatly/))
+[__Watch the demo__](https://moonsh1nee.github.io/Eatly/)
 
 ## Technologies:
 
